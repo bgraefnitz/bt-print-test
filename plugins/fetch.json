@@ -1,0 +1,18 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-munbynplugin": {
+    "source": {
+      "type": "local",
+      "path": "C:\\Users\\Brian\\Documents\\Cordova\\bt-print-test\\node_modules\\cordova-plugin-munbynplugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

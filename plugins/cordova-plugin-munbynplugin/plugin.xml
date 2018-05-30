@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-munbynplugin" version="0.0.1">
+    <name>MunbynPrinterPlugin</name>
+
+    <description>An Android Cordova plugin that allows printing to a MUNBYN printer via bluetooth.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,printer,bluetooth,munbyn</keywords>
+    <repo>https://github.com/bgraefnitz/MunbynPrinterPlugin.git</repo>
+    <issue>https://github.com/bgraefnitz/MunbynPrinterPlugin/issues</issue>
+	<engines>
+      <engine name="cordova" version=">=3.0.0" />
+   </engines>
+    <js-module src="www/munbyn.js" name="munbynPlugin">
+        <clobbers target="munbynPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="munbynPlugin">
+                <param name="android-package" value="zj.com.cn.bluetooth.sdk"/>
+            </feature>
+        </config-file>
+		
+	  <config-file target="AndroidManifest.xml" parent="/*">
+         <uses-permission android:name="android.permission.BLUETOOTH" />
+      </config-file>
+
+        <source-file src="src\Android\zj\com\cn\bluetooth\sdk\BluetoothService.java" target-dir="src/zj/com/cn/bluetooth/sdk" />
+        <source-file src="src\Android\zj\com\command\sdk\Command.java" target-dir="src/zj/com/command/sdk" />
+        <source-file src="src\Android\zj\com\command\sdk\PrinterCommand.java" target-dir="src/zj/com/command/sdk" />
+        <source-file src="src\Android\zj\com\cn\bluetooth\sdk\DeviceListActivity.java" target-dir="src/zj/com/cn/bluetooth/sdk" />
+        <source-file src="src\Android\zj\com\cn\bluetooth\sdk\Main_Activity.java" target-dir="src/zj/com/cn/bluetooth/sdk" />
+        <source-file src="src\Android\zj\com\command\sdk\PrintPicture.java" target-dir="src/zj/com/command/sdk" />
+        <source-file src="src\Android\zj\com\cn\bluetooth\sdk\BuildConfig.java" target-dir="src/zj/com/cn/bluetooth/sdk" />
+        <source-file src="src\Android\zj\com\cn\bluetooth\sdk\R.java" target-dir="src/zj/com/cn/bluetooth/sdk" />
+        <source-file src="src\Android\btsdk.jar" target-dir="libs" />
+        <source-file src="src\Android\zixng.jar" target-dir="libs" />
+    </platform>
+</plugin>
