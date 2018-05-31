@@ -13,7 +13,7 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"munbynPlugin\"><param name=\"android-package\" value=\"zj.com.cn.bluetooth.sdk\" /></feature>",
+              "xml": "<feature name=\"MunbynWrapper\"><param name=\"android-package\" value=\"com.bgraefnitz.wrapper.MunbynWrapper\" /></feature>",
               "count": 1
             }
           ]
@@ -42,11 +42,11 @@
   "dependent_plugins": {},
   "modules": [
     {
-      "id": "cordova-plugin-munbynplugin.munbynPlugin",
+      "id": "cordova-plugin-munbynplugin.MunbynWrapper",
       "file": "plugins/cordova-plugin-munbynplugin/www/munbyn.js",
       "pluginId": "cordova-plugin-munbynplugin",
       "clobbers": [
-        "munbynPlugin"
+        "MunbynWrapper"
       ]
     }
   ],

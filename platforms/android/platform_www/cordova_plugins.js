@@ -1,11 +1,11 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-plugin-munbynplugin.munbynPlugin",
+    "id": "cordova-plugin-munbynplugin.MunbynWrapper",
     "file": "plugins/cordova-plugin-munbynplugin/www/munbyn.js",
     "pluginId": "cordova-plugin-munbynplugin",
     "clobbers": [
-      "munbynPlugin"
+      "MunbynWrapper"
     ]
   }
 ];

@@ -1,9 +1,12 @@
-cordova.define("cordova-plugin-munbynplugin.munbynPlugin", function(require, exports, module) {
+cordova.define("cordova-plugin-munbynplugin.MunbynWrapper", function(require, exports, module) {
 var exec = require('cordova/exec');
 
 var BTPrinter = {
    write: function(fnSuccess, fnError){
-      exec(fnSuccess, fnError, "BluetoothService", "write", ["test"]);
+      exec(fnSuccess, fnError, "MunbynWrapper", "write", ["test"]);
+   },
+   show: function(fnSuccess, fnError){
+      exec(fnSuccess, fnError, 'MunbynWrapper', 'show', []);
    }
 };
 

@@ -41,12 +41,12 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
-		var test = munbynPlugin.write(function() {
+		var test = MunbynWrapper.write(function() {
 		  console.log('Excelsior!');
 		}, function(err) {
 		  console.log('Uh oh... ' + err);
 		});
-		console.log('btIsAvailable: ' + test);
+		console.log('show: ' + test);
     }
 };
 

@@ -13,13 +13,13 @@
 	<engines>
       <engine name="cordova" version=">=3.0.0" />
    </engines>
-    <js-module src="www/munbyn.js" name="munbynPlugin">
-        <clobbers target="munbynPlugin" />
+    <js-module src="www/munbyn.js" name="MunbynWrapper">
+        <clobbers target="MunbynWrapper" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="munbynPlugin">
-                <param name="android-package" value="zj.com.cn.bluetooth.sdk"/>
+            <feature name="MunbynWrapper">
+                <param name="android-package" value="com.bgraefnitz.wrapper.MunbynWrapper"/>
             </feature>
         </config-file>
 		
@@ -37,5 +37,6 @@
         <source-file src="src\Android\zj\com\cn\bluetooth\sdk\R.java" target-dir="src/zj/com/cn/bluetooth/sdk" />
         <source-file src="src\Android\btsdk.jar" target-dir="libs" />
         <source-file src="src\Android\zixng.jar" target-dir="libs" />
+        <source-file src="src\Android\MunbynWrapper.java" target-dir="src/com/bgraefnitz/wrapper" />
     </platform>
 </plugin>
