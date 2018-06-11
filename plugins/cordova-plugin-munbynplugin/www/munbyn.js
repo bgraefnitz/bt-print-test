@@ -6,6 +6,9 @@ var BTPrinter = {
    },
    show: function(fnSuccess, fnError){
       exec(fnSuccess, fnError, 'MunbynWrapper', 'show', []);
+   },
+   list: function(fnSuccess, fnError){
+      exec(fnSuccess, fnError, 'MunbynWrapper', 'list', []);
    }
 };
 

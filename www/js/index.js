@@ -41,7 +41,7 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
-		var test = MunbynWrapper.write(function() {
+		var test = MunbynWrapper.list(function() {
 		  console.log('Excelsior!');
 		}, function(err) {
 		  console.log('Uh oh... ' + err);

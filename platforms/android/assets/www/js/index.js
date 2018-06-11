@@ -41,8 +41,22 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
-		var test = MunbynWrapper.write(function() {
-		  console.log('Excelsior!');
+		var test = MunbynWrapper.list(function(deviceList) {
+		  if (deviceList[2] === "BlueTooth Printer") {
+            console.log('BlueTooth Printer found');
+                MunbynWrapper.connect(function(connection){
+                    console.log('BlueTooth connected');
+                    MunbynWrapper.write(function(x){
+                        console.log('Successfully written');
+                    })
+                }, function(err) {
+                    console.log('Uh oh... ' + err);
+                },"BlueTooth Printer");
+
+		  }
+		  else {
+		    console.log('BlueTooth Printer not found');
+		  }
 		}, function(err) {
 		  console.log('Uh oh... ' + err);
 		});
