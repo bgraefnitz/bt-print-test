@@ -49,8 +49,13 @@ public class MunbynWrapper extends CordovaPlugin {
                 try {
                     Context context = this.cordova.getActivity().getApplicationContext();
                     BluetoothService btService = new BluetoothService(context, new Handler());
+                    btService.start();
                     try {
                         btService.connect(mmDevice);
+                        byte[] byteArray = "write string".getBytes();
+                        btService.write(byteArray);
+                        callbackContext.success("written");
+                        return true;
                     } catch (Exception e) {
                         callbackContext.error("Bluetooth connection error");
                     }
