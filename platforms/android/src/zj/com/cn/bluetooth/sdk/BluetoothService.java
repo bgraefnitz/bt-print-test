@@ -38,7 +38,7 @@ public class BluetoothService {
     private Handler mHandler;
     private AcceptThread mAcceptThread;
     private ConnectThread mConnectThread;
-    private ConnectedThread mConnectedThread;
+    public ConnectedThread mConnectedThread;
     private int mState;
 
     // Constants that indicate the current connection state

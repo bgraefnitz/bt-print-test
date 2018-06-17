@@ -2,17 +2,11 @@ cordova.define("cordova-plugin-munbynplugin.MunbynWrapper", function(require, ex
 var exec = require('cordova/exec');
 
 var BTPrinter = {
-   write: function(fnSuccess, fnError){
-      exec(fnSuccess, fnError, "MunbynWrapper", "write", ["test"]);
-   },
-   show: function(fnSuccess, fnError){
-      exec(fnSuccess, fnError, 'MunbynWrapper', 'show', []);
+   write: function(fnSuccess, fnError, deviceName, message){
+      exec(fnSuccess, fnError, "MunbynWrapper", "write", [deviceName,message]);
    },
    list: function(fnSuccess, fnError){
       exec(fnSuccess, fnError, 'MunbynWrapper', 'list', []);
-   },
-   connect: function(fnSuccess, fnError, name){
-      exec(fnSuccess, fnError, 'MunbynWrapper', 'connect', [name]);
    }
 };
 

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Handler;
 
 import zj.com.cn.bluetooth.sdk.BluetoothService;
+import zj.com.command.sdk.PrinterCommand;
 // Cordova-required packages
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -26,25 +27,13 @@ import java.util.UUID;
 public class MunbynWrapper extends CordovaPlugin {
     private static final String LOG_TAG = "BluetoothPrinter";
     BluetoothAdapter mBluetoothAdapter;
-    BluetoothSocket mmSocket;
     BluetoothDevice mmDevice;
     @Override
     public boolean execute(String action, JSONArray args,
     final CallbackContext callbackContext) throws JSONException {
-        if (action.equals("show")) {
-            callbackContext.success("win");
-            return true;
-        }
-        else if (action.equals("write")) {
-            byte[] byteArray = "write string".getBytes();
-            Context context = this.cordova.getActivity().getApplicationContext();
-            BluetoothService btService = new BluetoothService(context, new Handler());
-            btService.write(byteArray);
-            callbackContext.success("written");
-            return true;
-        }
-        else if (action.equals("connect")) {
+        if (action.equals("write")) {
             String name = args.getString(0);
+            String message = args.getString(1);
             if (findBT(callbackContext, name)) {
                 try {
                     Context context = this.cordova.getActivity().getApplicationContext();
@@ -52,8 +41,10 @@ public class MunbynWrapper extends CordovaPlugin {
                     btService.start();
                     try {
                         btService.connect(mmDevice);
-                        byte[] byteArray = "write string".getBytes();
-                        btService.write(byteArray);
+                        while(btService.mConnectedThread == null)
+                        {}
+                        byte[] sendCommand = PrinterCommand.POS_Print_Text(message, "GBK", 0, 0, 0, 0);
+                        btService.write(sendCommand);
                         callbackContext.success("written");
                         return true;
                     } catch (Exception e) {

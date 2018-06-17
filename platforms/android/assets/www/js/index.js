@@ -44,14 +44,11 @@ var app = {
 		var test = MunbynWrapper.list(function(deviceList) {
 		  if (deviceList[2] === "BlueTooth Printer") {
             console.log('BlueTooth Printer found');
-                MunbynWrapper.connect(function(connection){
-                    console.log('BlueTooth connected');
-                    MunbynWrapper.write(function(x){
-                        console.log('Successfully written');
-                    })
+                MunbynWrapper.write(function(connection){
+                    console.log('BlueTooth connected and written to');
                 }, function(err) {
                     console.log('Uh oh... ' + err);
-                },"BlueTooth Printer");
+                },"BlueTooth Printer","write string\ntest\ntesting\n\n");
 
 		  }
 		  else {
