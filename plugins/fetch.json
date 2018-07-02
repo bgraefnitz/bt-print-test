@@ -9,8 +9,8 @@
   },
   "cordova-plugin-munbynplugin": {
     "source": {
-      "type": "local",
-      "path": "C:\\Users\\Brian\\Documents\\GitHub\\bt-print-test\\node_modules\\cordova-plugin-munbynplugin"
+      "type": "registry",
+      "id": "https://github.com/bgraefnitz/MunbynPrinterPlugin.git"
     },
     "is_top_level": true,
     "variables": {}
