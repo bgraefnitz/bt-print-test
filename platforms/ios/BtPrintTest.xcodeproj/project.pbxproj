@@ -16,6 +16,8 @@
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		D361C54D20E9DEEA00536218 /* PrinterSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9E943E3A549679CA1B313 /* PrinterSDK.h */; };
 		D361C54F20E9DEFB00536218 /* MunbynWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = 71E33F1B68AB49DA93E4496F /* MunbynWrapper.h */; };
+		D361C55620E9EBD100536218 /* libPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF904382BAFD4E21A3B9CE01 /* libPrinterSDK.a */; };
+		D3FFAF802106709C00739B25 /* MunbynWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE86501B1C4BB3B2697459 /* MunbynWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				D361C55620E9EBD100536218 /* libPrinterSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FFAF802106709C00739B25 /* MunbynWrapper.m in Sources */,
 				D361C54F20E9DEFB00536218 /* MunbynWrapper.h in Sources */,
 				D361C54D20E9DEEA00536218 /* PrinterSDK.h in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
@@ -338,9 +342,14 @@
 				INFOPLIST_FILE = "BtPrintTest/BtPrintTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BtPrintTest/Plugins/cordova-plugin-munbynplugin",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgraefnitz.btprinttest;
 				PRODUCT_NAME = BtPrintTest;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -362,9 +371,14 @@
 				INFOPLIST_FILE = "BtPrintTest/BtPrintTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BtPrintTest/Plugins/cordova-plugin-munbynplugin",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgraefnitz.btprinttest;
 				PRODUCT_NAME = BtPrintTest;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -372,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3047A5111AB8059700498E2A /* build.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -399,7 +414,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -407,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3047A5111AB8059700498E2A /* build.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -432,7 +448,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
 		};
