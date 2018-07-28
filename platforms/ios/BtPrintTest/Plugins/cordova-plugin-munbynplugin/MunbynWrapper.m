@@ -6,23 +6,32 @@
 
 - (void)write:(CDVInvokedUrlCommand*)command
 {
-    NSLog(@"Hello World");
+    NSArray * arguments = [command arguments];
+    NSString *printerName = [arguments objectAtIndex:0];
+    NSString *printString = [arguments objectAtIndex:1];
+    
     CDVPluginResult* pluginResult = nil;
     NSString* message = [command.arguments objectAtIndex:0];
-    NSMutableArray* _printerArray;
-    if (message != nil && [message length] > 0) {
-        Printer* printer = nil;
-        [[PrinterSDK defaultPrinterSDK] connectBT:printer];
-//      [[PrinterSDK defaultPrinterSDK] scanPrintersWithCompletion:^(Printer *printer)
-//        {
-//            __block NSMutableArray *_printerArray = nil;
-//            if(nil == _printerArray)
-//            {
-//                _printerArray = [[NSMutableArray alloc] initWithCapacity:1];
-//            }
-//            [_printerArray addObject:printer];
-//        }];
-//        [[PrinterSDK defaultPrinterSDK] printText:@"testing iOS"];
+    __block NSMutableArray* _printerArray;
+    if (printString != nil && printerName != nil) {
+        [[PrinterSDK defaultPrinterSDK] scanPrintersWithCompletion:^(Printer* printer)
+         {
+             NSLog(@"win");
+             if (nil == _printerArray)
+             {
+                 _printerArray = [[NSMutableArray alloc] initWithCapacity:1];
+             }
+             
+             [_printerArray addObject:printer];
+         }];
+        [[PrinterSDK defaultPrinterSDK] scanPrintersWithCompletion:^(Printer *printer)
+          {
+              if([printer.name isEqualToString:@"BlueTooth Printer"])
+              {
+                  [[PrinterSDK defaultPrinterSDK] connectBT:printer];
+                  [[PrinterSDK defaultPrinterSDK] printText:@"testing iOS"];
+              }
+          }];
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
     } else {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
