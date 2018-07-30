@@ -75,8 +75,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [PrinterSDK defaultPrinterSDK];
+    //[PrinterSDK defaultPrinterSDK];
     // Do any additional setup after loading the view from its nib.
 }
 
