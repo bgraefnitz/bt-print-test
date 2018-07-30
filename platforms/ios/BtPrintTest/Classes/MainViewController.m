@@ -26,6 +26,7 @@
 //
 
 #import "MainViewController.h"
+#import "PrinterSDK.h"
 
 @implementation MainViewController
 
@@ -74,6 +75,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [PrinterSDK defaultPrinterSDK];
     // Do any additional setup after loading the view from its nib.
 }
 

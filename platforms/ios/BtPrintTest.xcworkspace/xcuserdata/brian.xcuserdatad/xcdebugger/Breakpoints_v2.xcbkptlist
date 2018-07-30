@@ -108,13 +108,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BtPrintTest/Plugins/cordova-plugin-munbynplugin/MunbynWrapper.m"
-            timestampString = "554445435.991564"
+            timestampString = "554616400.398194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "-write:"
-            landmarkType = "7">
+            startingLineNumber = "51"
+            endingLineNumber = "51">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NBCoreBluetoothAPIMisuseGuard.m"
+            timestampString = "554609698.656891"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "isCentralPoweredOn()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
