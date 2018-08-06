@@ -10,7 +10,7 @@
   "cordova-plugin-munbynplugin": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/bgraefnitz/MunbynPrinterPlugin.git"
+      "id": "https://github.com/bgraefnitz/MunbynPrinterPlugin"
     },
     "is_top_level": true,
     "variables": {}

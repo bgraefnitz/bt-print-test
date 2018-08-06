@@ -8,6 +8,7 @@
 @implementation MunbynWrapper
 
 static NSString *printString = nil;
+BOOL connected;
 
 - (void)write:(CDVInvokedUrlCommand*)command
 {
@@ -22,18 +23,24 @@ static NSString *printString = nil;
     NSString* message = [command.arguments objectAtIndex:0];
     
     if (printString != nil && printerName != nil) {
-        double delayInSeconds = 1.0f;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
+        if(!connected)
+        {
+            double delayInSeconds = 1.0f;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
                        {        [[PrinterSDK defaultPrinterSDK] scanPrintersWithCompletion:^(Printer *printer)
-         {
-            if([printer.name isEqualToString:@"BlueTooth Printer"])
             {
-                [[PrinterSDK defaultPrinterSDK] connectBT:printer];
-                //[[PrinterSDK defaultPrinterSDK] printText:@"testing iOS"];
-            }
-          }];
+               if([printer.name isEqualToString:@"BlueTooth Printer"])
+               {
+                  [[PrinterSDK defaultPrinterSDK] connectBT:printer];
+               }
+            }];
                        });
+        }
+        else
+        {
+            [[PrinterSDK defaultPrinterSDK] printText:printString];
+        }
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     } else {
@@ -45,14 +52,17 @@ static NSString *printString = nil;
 -(void)pluginInitialize
 {
     [PrinterSDK defaultPrinterSDK];
+    connected = false;
 }
 
 - (void)handlePrinterConnectedNotification:(NSNotification*)notification
 {
+    connected = true;
     double delayInSeconds = 1.0f;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
                    {
                        [[PrinterSDK defaultPrinterSDK] printText:printString];
-                   });}
+                   });
+}
 @end

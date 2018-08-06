@@ -6,8 +6,8 @@
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "https://github.com/bgraefnitz/MunbynPrinterPlugin.git",
-    "rawSpec": "https://github.com/bgraefnitz/MunbynPrinterPlugin.git",
+    "raw": "https://github.com/bgraefnitz/MunbynPrinterPlugin",
+    "rawSpec": "https://github.com/bgraefnitz/MunbynPrinterPlugin",
     "saveSpec": "git+https://github.com/bgraefnitz/MunbynPrinterPlugin.git",
     "fetchSpec": "https://github.com/bgraefnitz/MunbynPrinterPlugin.git",
     "gitCommittish": null
@@ -16,9 +16,9 @@
     "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/bgraefnitz/MunbynPrinterPlugin.git#4b1a6d0316bf6a5951f01919f051ad87816fa579",
-  "_spec": "https://github.com/bgraefnitz/MunbynPrinterPlugin.git",
-  "_where": "C:\\Users\\Brian\\Documents\\GitHub\\bt-print-test",
+  "_resolved": "git+https://github.com/bgraefnitz/MunbynPrinterPlugin.git#ca4731d878887729cad902fbb9cd6884f11e14b6",
+  "_spec": "https://github.com/bgraefnitz/MunbynPrinterPlugin",
+  "_where": "/Users/brian/Documents/GitHub/bt-print-test",
   "author": {
     "name": "Brian Graefnitz",
     "email": "bgraefnitz@gmail.com"

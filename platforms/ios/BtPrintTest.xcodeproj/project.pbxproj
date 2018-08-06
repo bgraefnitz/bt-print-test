@@ -13,11 +13,11 @@
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		35F3DB5B066D4CEB95B087D4 /* libPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139B9DEB80E54D91BA523973 /* libPrinterSDK.a */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		D361C54D20E9DEEA00536218 /* PrinterSDK.h in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9E943E3A549679CA1B313 /* PrinterSDK.h */; };
-		D361C54F20E9DEFB00536218 /* MunbynWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = 71E33F1B68AB49DA93E4496F /* MunbynWrapper.h */; };
-		D361C55620E9EBD100536218 /* libPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF904382BAFD4E21A3B9CE01 /* libPrinterSDK.a */; };
-		D3FFAF802106709C00739B25 /* MunbynWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE86501B1C4BB3B2697459 /* MunbynWrapper.m */; };
+		B100E799B5EA45A9BF042FA9 /* MunbynWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4514A563869745D297ED3096 /* MunbynWrapper.m */; };
+		D361C54D20E9DEEA00536218 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		D361C54F20E9DEFB00536218 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +46,11 @@
 
 /* Begin PBXFileReference section */
 		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BtPrintTest/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		139B9DEB80E54D91BA523973 /* libPrinterSDK.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libPrinterSDK.a; path = "BtPrintTest/Plugins/cordova-plugin-munbynplugin/libPrinterSDK.a"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* BtPrintTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BtPrintTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CA9E943E3A549679CA1B313 /* PrinterSDK.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = PrinterSDK.h; path = "cordova-plugin-munbynplugin/PrinterSDK.h"; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -60,11 +60,11 @@
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
 		32CA4F630368D1EE00C91783 /* BtPrintTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BtPrintTest-Prefix.pch"; sourceTree = "<group>"; };
-		4AAE86501B1C4BB3B2697459 /* MunbynWrapper.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = MunbynWrapper.m; path = "cordova-plugin-munbynplugin/MunbynWrapper.m"; sourceTree = "<group>"; };
+		4514A563869745D297ED3096 /* MunbynWrapper.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = MunbynWrapper.m; path = "cordova-plugin-munbynplugin/MunbynWrapper.m"; sourceTree = "<group>"; };
 		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = BtPrintTest/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		71E33F1B68AB49DA93E4496F /* MunbynWrapper.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = MunbynWrapper.h; path = "cordova-plugin-munbynplugin/MunbynWrapper.h"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BtPrintTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "BtPrintTest-Info.plist"; path = "BtPrintTest/BtPrintTest-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
-		BF904382BAFD4E21A3B9CE01 /* libPrinterSDK.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libPrinterSDK.a; path = "cordova-plugin-munbynplugin/libPrinterSDK.a"; sourceTree = "<group>"; };
+		9E146C82F62A4640A5887879 /* MunbynWrapper.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = MunbynWrapper.h; path = "cordova-plugin-munbynplugin/MunbynWrapper.h"; sourceTree = "<group>"; };
+		CBA9F7A93F6049B1830F1B72 /* PrinterSDK.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = PrinterSDK.h; path = "cordova-plugin-munbynplugin/PrinterSDK.h"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				D361C55620E9EBD100536218 /* libPrinterSDK.a in Frameworks */,
+				35F3DB5B066D4CEB95B087D4 /* libPrinterSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +148,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				139B9DEB80E54D91BA523973 /* libPrinterSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,10 +175,9 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				4AAE86501B1C4BB3B2697459 /* MunbynWrapper.m */,
-				BF904382BAFD4E21A3B9CE01 /* libPrinterSDK.a */,
-				71E33F1B68AB49DA93E4496F /* MunbynWrapper.h */,
-				2CA9E943E3A549679CA1B313 /* PrinterSDK.h */,
+				4514A563869745D297ED3096 /* MunbynWrapper.m */,
+				9E146C82F62A4640A5887879 /* MunbynWrapper.h */,
+				CBA9F7A93F6049B1830F1B72 /* PrinterSDK.h */,
 			);
 			name = Plugins;
 			path = BtPrintTest/Plugins;
@@ -220,7 +220,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 820;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = Y6U9L3AFQ2;
@@ -302,12 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FFAF802106709C00739B25 /* MunbynWrapper.m in Sources */,
-				D361C54F20E9DEFB00536218 /* MunbynWrapper.h in Sources */,
-				D361C54D20E9DEEA00536218 /* PrinterSDK.h in Sources */,
+				D361C54F20E9DEFB00536218 /* (null) in Sources */,
+				D361C54D20E9DEEA00536218 /* (null) in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				B100E799B5EA45A9BF042FA9 /* MunbynWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +345,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BtPrintTest/Plugins/cordova-plugin-munbynplugin",
+					"\"$(SRCROOT)/BtPrintTest/Plugins/cordova-plugin-munbynplugin\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgraefnitz.btprinttest;
 				PRODUCT_NAME = BtPrintTest;
@@ -374,6 +375,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BtPrintTest/Plugins/cordova-plugin-munbynplugin",
+					"\"$(SRCROOT)/BtPrintTest/Plugins/cordova-plugin-munbynplugin\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bgraefnitz.btprinttest;
 				PRODUCT_NAME = BtPrintTest;

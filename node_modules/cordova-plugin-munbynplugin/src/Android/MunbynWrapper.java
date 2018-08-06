@@ -41,8 +41,17 @@ public class MunbynWrapper extends CordovaPlugin {
                     btService.start();
                     try {
                         btService.connect(mmDevice);
-                        while(btService.mConnectedThread == null)
-                        {}
+                        long t= System.currentTimeMillis();
+                        long end = t+5000;
+                        while(btService.mConnectedThread == null && System.currentTimeMillis() < end)
+                        {
+
+                        }
+                        if(btService.mConnectedThread == null)
+                        {
+                            callbackContext.error("Failed to connect to Bluetooth device.");
+                            throw new JSONException("Failed to connect to Bluetooth device.");
+                        }
                         message = message + "\n";
                         byte[] sendCommand = PrinterCommand.POS_Print_Text(message, "GBK", 0, 0, 0, 0);
                         btService.write(sendCommand);

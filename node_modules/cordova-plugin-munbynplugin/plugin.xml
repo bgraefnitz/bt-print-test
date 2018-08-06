@@ -49,6 +49,6 @@
 		<header-file src="src/iOS/MunbynWrapper.h" />
 		<source-file src="src/iOS/MunbynWrapper.m" />
 		<header-file src="src/iOS/PrinterSDK.h" />
-		<source-file src="src/iOS/libPrinterSDK.a" />
+		<source-file src="src/iOS/libPrinterSDK.a" framework="true"/>
 	</platform>
 </plugin>

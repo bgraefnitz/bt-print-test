@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.getElementById('clickMe').addEventListener("click",clicked);
     },
 
     // deviceready Event Handler
@@ -45,8 +46,15 @@ var app = {
 		  console.log('Excelsior!');
 		}, function(err) {
 		  console.log('Uh oh... ' + err);
-		},"BlueTooth Printer","test/ncordova/n");
+		},"BlueTooth Printer","ios event received");
     }
 };
 
+function clicked() {
+    var test = MunbynWrapper.write(function() {
+                                   console.log('Excelsior!');
+                                   }, function(err) {
+                                   console.log('Uh oh... ' + err);
+                                   },"BlueTooth Printer","ios click received");
+}
 app.initialize();
